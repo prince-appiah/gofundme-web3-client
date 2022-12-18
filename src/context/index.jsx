@@ -6,7 +6,7 @@ import { ethers } from "ethers";
 const Web3Context = createContext();
 
 export const Web3Provider = ({ children }) => {
-  const { contract } = useContract(process.env.THIRDWEB_CONTRACT_ID);
+  const { contract } = useContract(import.meta.env.VITE_THIRDWEB_CONTRACT_ID);
   const { mutateAsync: createCampaign } = useContractWrite(contract, "createCampaign");
   const address = useAddress();
   const connect = useMetamask();
