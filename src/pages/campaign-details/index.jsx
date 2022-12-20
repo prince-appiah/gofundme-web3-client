@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { thirdweb } from "../../assets";
 import { Button, Loader } from "../../components";
 import { useWeb3Context } from "../../context";
